@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native";
-import EmbeddingExpression from "./src/screens/EmbeddingExpression";
+import Event from "./src/screens/Event";
 
 export default function App() {
   return (
     <SafeAreaView>
-      <EmbeddingExpression />
-      <StatusBar style={{ flex: 1}} />
+      <Event />
+      <StatusBar style={{ flex: 1 }} />
     </SafeAreaView>
   );
 }
