@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native";
-import Map from "./src/screens/Map";
+import FlatList from "./src/screens/FlatList";
 
 export default function App() {
   return (
     <SafeAreaView>
-      <Map />
+      <FlatList />
       <StatusBar style={{ flex: 1 }} />
     </SafeAreaView>
   );
