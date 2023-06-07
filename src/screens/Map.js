@@ -2,13 +2,12 @@ import { Text, View } from "react-native";
 
 function Map() {
   const mobilmotor = [
-    "BMW",
-    "TESLA",
-    "PORSCHE",
-    "FERRARI",
-    "BAJAJ",
-    "SUPRA X",
-    "ASTREA",
+    {
+      name: "BMW",
+    },
+    {
+      name: "TESLA",
+    },
   ];
 
   return (
@@ -16,7 +15,7 @@ function Map() {
       {mobilmotor.map((item, index) => {
         return (
           <View key={index}>
-            <Text >{item}</Text>
+            <Text>{item.name}</Text>
           </View>
         );
       })}
