@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native";
-import Event from "./src/screens/Event";
+import Props from "./src/screens/props";
 
 export default function App() {
   return (
     <SafeAreaView>
-      <Event />
+      <Props />
       <StatusBar style={{ flex: 1 }} />
     </SafeAreaView>
   );
