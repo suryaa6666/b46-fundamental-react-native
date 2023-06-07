@@ -1,18 +1,21 @@
-import { useState } from "react";
-import { Alert, Button, Text, View } from "react-native";
+import { useReducer } from "react";
+import { Button, Text, View } from "react-native";
+
+let counter = 0;
 
 function State() {
-  const [james, jessica] = useState(100);
+  const [_, dispatch] = useReducer((x) => {
+    return x + 1;
+  }, 0);
 
   const tambah = () => {
-    if (james >= 100) {
-      return Alert.alert("gak bisa", "baca");
-    }
-    jessica(james + 1);
+    counter += 1;
+    dispatch();
   };
 
   const kurang = () => {
-    jessica(james - 1);
+    counter -= 1;
+    dispatch();
   };
   return (
     <View
@@ -23,7 +26,7 @@ function State() {
         width: "100%",
       }}
     >
-      <Text style={{ fontSize: 100 }}>{james}</Text>
+      <Text style={{ fontSize: 100 }}>{counter}</Text>
       <View
         style={{
           width: "100%",
